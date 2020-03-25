@@ -82,4 +82,13 @@ describe('Park', function() {
 
   });
 
+  it('should be able to remove all dinosaurs of a particular species', function(){
+    
+    park.remove_all_dino_species('t-rex');
+    
+    assert.deepStrictEqual(park.collectionOfDinosaurs.length,2);
+  });
+
 });
+
+

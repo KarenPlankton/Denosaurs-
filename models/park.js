@@ -10,7 +10,8 @@ const Park = function (name,ticketPrice, collectionOfDinosaurs) {
         collectionOfDinosaurs.pop();
     }
     this.findSpecies = function(species){
-       let dinosaurTempArray = collectionOfDinosaurs.filter(dino => dino.species === species)
+        let dinosaurTempArray=[]
+       dinosaurTempArray = collectionOfDinosaurs.filter(dino => dino.species === species)
        return dinosaurTempArray
     }
     
@@ -49,11 +50,14 @@ const Park = function (name,ticketPrice, collectionOfDinosaurs) {
 
   Park.prototype.remove_all_dino_species = function(species){
     let dinosaurTempArray = this.collectionOfDinosaurs.filter(dino => dino.species !== species)
-      
-    }
-   
-    return this.dino_ary;
+    this.collectionOfDinosaurs = dinosaurTempArray ;
+    return this.collectionOfDinosaurs
+
   }
+
+    
+  
+
   module.exports = Park;
  
   
