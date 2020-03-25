@@ -45,18 +45,18 @@ describe('Park', function() {
     park.removeDinosaur();
     const actual = park.collectionOfDinosaurs;
     assert.strictEqual(actual.length,2)
-
   });
    
 
-  it('should be able to find the dinosaur that attracts the most visitors',function() {
+  it('should be able to find the dinosaur that attracts the most visitors');
     
-    
-    assert.strictEqual(actual,dinosaur3)
+
+
+  it('should be able to find all dinosaurs of a particular species',function() {
+    const actual = park.findSpecies('t-rex');
+    assert.strictEqual(actual.length,1)
 
   });
-
-  it('should be able to find all dinosaurs of a particular species');
 
   it('should be able to calculate the total number of visitors per day');
 
