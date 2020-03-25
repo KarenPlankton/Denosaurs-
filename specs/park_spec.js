@@ -48,7 +48,12 @@ describe('Park', function() {
   });
    
 
-  it('should be able to find the dinosaur that attracts the most visitors');
+  it('should be able to find the dinosaur that attracts the most visitors',function() {
+    
+   const actual = park.popularDinosaur();
+   assert.strictEqual(actual,'triceratops')
+
+  });
     
 
 
@@ -58,10 +63,23 @@ describe('Park', function() {
 
   });
 
-  it('should be able to calculate the total number of visitors per day');
+  it('should be able to calculate the total number of visitors per day',function() {
+    const actual = park.dailyVisitors()
+    assert.strictEqual(actual,150)
 
-  it('should be able to calculate the total number of visitors per year');
+  });
 
-  it('should be able to calculate total revenue for one year');
+
+  it('should be able to calculate the total number of visitors per year',function() {
+    const actual = park.yearlyVisitors()
+    assert.strictEqual(actual,54750)
+
+  });
+
+  it('should be able to calculate total revenue for one year',function() {
+    const actual = park.totalRevenue()
+    assert.strictEqual(actual,547500)
+
+  });
 
 });
